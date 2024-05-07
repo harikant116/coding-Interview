@@ -46,3 +46,76 @@
         }
     }
 }
+
+/*-- -------------------------- -->
+<---        About               -->
+<--- -------------------------- -*/
+
+#about-salmon {
+
+    .cs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .text-content {
+        max-width: 700px;
+    }
+
+    .image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+        font-size: min(2vw, .8em);
+        width: calc(779 / 16 * 1em);
+        height: calc(542 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        .cs-picture {
+            position: absolute;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+            }
+        }
+        .cs-picture1 {
+            width: calc(779 / 16 * 1em);
+            height: calc(542 / 16 * 1em);
+            top: 0;
+            left: 0;
+        }
+    
+    }
+
+    ul li::marker{
+        color: var(--primary);
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    #about-salmon {
+
+        .cs-container {
+            flex-direction: row;
+        }
+
+        .image-group {
+            /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+            font-size: min(0.8vw, .8em);
+        }
+
+        .text-content {
+            max-width: 500px;
+        }
+    }
+}
